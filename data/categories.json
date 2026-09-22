@@ -1,0 +1,185 @@
+{
+  "_comment": "Top-level taxonomy. The 20 categories match the project brief one-for-one; ids are snake_case and drive both the data/tools/<id>.json filename and the /categories/<id>/ URL. `hue` is a designed accent per family (HSL hue on a near-black canvas) and `icon` maps to an inline SVG in generator/icons.py.",
+  "categories": [
+    {
+      "id": "general_chat_assistants",
+      "name": "General-purpose AI chat assistants",
+      "short_name": "Chat assistants",
+      "icon": "chat",
+      "hue": 330,
+      "order": 1,
+      "description": "The frontier chat products people open dozens of times a day. This is where most professionals start, and where model quality, tool use, file handling and data-retention policies actually get decided."
+    },
+    {
+      "id": "coding_assistants",
+      "name": "AI coding assistants & AI-native IDEs",
+      "short_name": "Coding assistants",
+      "icon": "code",
+      "hue": 165,
+      "order": 2,
+      "description": "Autocomplete, chat-in-editor and autonomous agents that plan and edit multi-file changes. Selection hinges on how you are billed (seat vs. metered tokens), which models you are allowed to send code to, and how much review overhead the agent creates."
+    },
+    {
+      "id": "image_generation",
+      "name": "Image generation & editing",
+      "short_name": "Image generation",
+      "icon": "image",
+      "hue": 38,
+      "order": 3,
+      "description": "Text-to-image models, background removal, retouching, upscaling and brand-asset pipelines. The practical questions are commercial licensing, style consistency across a campaign, and whether edits are reproducible."
+    },
+    {
+      "id": "video_generation",
+      "name": "Video generation & editing",
+      "short_name": "Video generation",
+      "icon": "video",
+      "hue": 350,
+      "order": 4,
+      "description": "Text-to-video, image-to-video, avatars and AI-assisted editing. Costs are usually metered by render seconds, so teams need shot-level budgeting rather than a per-seat mental model."
+    },
+    {
+      "id": "audio_music_voice",
+      "name": "Audio, music & voice",
+      "short_name": "Audio & voice",
+      "icon": "audio",
+      "hue": 88,
+      "order": 5,
+      "description": "Voice synthesis and cloning, music generation, sound design and audio cleanup. Check consent and disclosure rules before cloning anyone's voice, and read the licence terms attached to generated music."
+    },
+    {
+      "id": "writing_content",
+      "name": "Writing, editing & content generation",
+      "short_name": "Writing & editing",
+      "icon": "pen",
+      "hue": 205,
+      "order": 6,
+      "description": "Drafting, rewrite and tone-shifting tools plus grammar and style engines that plug into docs, browsers and CMSs. The useful ones preserve your voice and your house style instead of flattening both."
+    },
+    {
+      "id": "meeting_notes",
+      "name": "Meeting notes, transcription & summarization",
+      "short_name": "Meeting notes",
+      "icon": "mic",
+      "hue": 185,
+      "order": 7,
+      "description": "Bots and local recorders that capture calls, produce structured summaries and push action items into your task tracker. The deciding factors are recording consent, retention, and whether they work on your conferencing stack."
+    },
+    {
+      "id": "productivity_workflow",
+      "name": "Productivity & workflow automation",
+      "short_name": "Productivity",
+      "icon": "workflow",
+      "hue": 52,
+      "order": 8,
+      "description": "Assistants and agentic runners that sit across email, docs, calendars and internal systems. Look hard at audit logging, permission scoping and what happens when a run fails halfway through."
+    },
+    {
+      "id": "data_analysis",
+      "name": "Data analysis & business intelligence",
+      "short_name": "Data & BI",
+      "icon": "chart",
+      "hue": 235,
+      "order": 9,
+      "description": "Natural-language querying, automated charting and BI copilots. The important question is whether semantic definitions are governed or invented on the fly, because that decides whether the numbers survive a board deck."
+    },
+    {
+      "id": "presentation_documents",
+      "name": "Presentation & document generation",
+      "short_name": "Slides & docs",
+      "icon": "slides",
+      "hue": 18,
+      "order": 10,
+      "description": "Deck builders, document assemblers and PDF pipelines. Most teams care most about template fidelity, on-brand fonts and colours, and whether the output stays editable."
+    },
+    {
+      "id": "design_ux",
+      "name": "Design & UI/UX",
+      "short_name": "Design",
+      "icon": "design",
+      "hue": 292,
+      "order": 11,
+      "description": "Prompt-to-UI generators, design copilots and prototyping tools that hand off to real component code. The workflow question is whether the output is a picture, a spec, or a pull request."
+    },
+    {
+      "id": "marketing_seo",
+      "name": "Marketing, SEO & advertising",
+      "short_name": "Marketing & SEO",
+      "icon": "megaphone",
+      "hue": 316,
+      "order": 12,
+      "description": "Keyword and content briefs, ad-copy variants, creative generation and campaign analytics. These tools move fast, so treat any ranking or reach claim as a measurement task, not a promise."
+    },
+    {
+      "id": "customer_support",
+      "name": "Customer support & chatbots",
+      "short_name": "Support",
+      "icon": "headset",
+      "hue": 150,
+      "order": 13,
+      "description": "Platforms for building and operating the assistants that answer your customers. This category is about grounded answers, escalation paths, analytics and CSAT - not about general chat products."
+    },
+    {
+      "id": "sales_crm",
+      "name": "Sales & CRM-adjacent AI",
+      "short_name": "Sales & CRM",
+      "icon": "funnel",
+      "hue": 120,
+      "order": 14,
+      "description": "Call intelligence, lead scoring, enrichment and CRM copilots. Value usually depends on data hygiene and on how well the tool fits the CRM your team already lives in."
+    },
+    {
+      "id": "research_search",
+      "name": "Research & AI-powered search engines",
+      "short_name": "Research & search",
+      "icon": "search",
+      "hue": 262,
+      "order": 15,
+      "description": "Answer engines, literature search and deep-research agents that cite sources. Verify the citations: fluent synthesis with a broken source trail is worse than no answer."
+    },
+    {
+      "id": "no_code_builders",
+      "name": "No-code / low-code app & automation builders",
+      "short_name": "No-code builders",
+      "icon": "blocks",
+      "hue": 275,
+      "order": 16,
+      "description": "Describe an app or an automation and get a working one, plus the platforms that stitch SaaS tools together. Read the hosting, SSO and data-residency terms before anything touches production."
+    },
+    {
+      "id": "devtools_mlops",
+      "name": "Developer tools, MLOps & model infrastructure",
+      "short_name": "Dev tools & MLOps",
+      "icon": "server",
+      "hue": 195,
+      "order": 17,
+      "description": "Vector stores, evaluation and observability harnesses, fine-tuning and inference platforms. This is the layer that turns an impressive prototype into something you can operate and bill for."
+    },
+    {
+      "id": "hr_recruiting",
+      "name": "HR, recruiting & people-ops AI",
+      "short_name": "HR & recruiting",
+      "icon": "users",
+      "hue": 305,
+      "order": 18,
+      "description": "Sourcing, screening, scheduling and employee-experience tools. Automated decisions about people are regulated in many jurisdictions, so bias auditing and human review are part of adoption, not optional extras."
+    },
+    {
+      "id": "legal_finance",
+      "name": "Legal, finance & vertical-specific AI",
+      "short_name": "Legal & finance",
+      "icon": "scale",
+      "hue": 5,
+      "order": 19,
+      "description": "Contract review, research and drafting, plus finance work like reconciliation and modelling. These fields punish confident errors, so citation quality and auditability matter more than speed."
+    },
+    {
+      "id": "governance_security",
+      "name": "Enterprise AI governance, security & observability",
+      "short_name": "Governance",
+      "icon": "shield",
+      "hue": 215,
+      "order": 20,
+      "description": "Where organisations inventory what AI is in use, red-team it, monitor it in production and evidence compliance to auditors. Usually bought by platform, security or risk teams rather than by individuals."
+    }
+  ]
+}

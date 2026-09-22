@@ -1,0 +1,25 @@
+{
+  "_comment": "Global site metadata. `url` is used for canonical tags, Open Graph URLs and sitemap.xml - CONFIRM the production domain with Joseph before launch (build prints a warning while url_confirmed is false).",
+  "name": "learners.ai",
+  "title": "learners.ai",
+  "tagline": "The AI tooling reference for working professionals",
+  "description": "An open-source, hand-verified directory of AI tools for professional work: what each tool is, why it matters, who uses it, how to start, and what it actually costs.",
+  "url": "https://learners.ai",
+  "url_confirmed": false,
+  "repo": "https://github.com/CodeMateAfrica/learners.ai",
+  "license": "MIT",
+  "maintainer": "Joseph",
+  "pricing_stale_after_days": 180,
+  "verification_disclaimer": "Pricing is curated by hand and re-verified periodically, not fetched live. Every entry shows the date it was last checked - always confirm on the vendor's own pricing page before you commit budget.",
+  "hero": {
+    "eyebrow": "Open reference · hand-verified entries",
+    "headline": "Every AI tool. What it is, who it is for, what it costs.",
+    "sub": "A working directory of AI tooling written for people who have to choose a tool, roll it out, and defend the decision. No affiliate links, no vendor copy, and a visible verification date on every price."
+  },
+  "nav": [
+    { "label": "Directory", "href": "/directory/" },
+    { "label": "Categories", "href": "/categories/" },
+    { "label": "By role", "href": "/roles/" },
+    { "label": "Method", "href": "/about/" }
+  ]
+}

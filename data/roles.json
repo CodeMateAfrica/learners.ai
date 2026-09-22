@@ -1,0 +1,149 @@
+{
+  "_comment": "Professional audiences used by the `who_uses_it` field. Tool entries must reference `name` (or an `alias`); unknown values fail the build. The /roles/<slug>/ pages are generated from this file plus the tool data, so they can never drift out of sync.",
+  "roles": [
+    {
+      "id": "software_engineers",
+      "name": "Software Engineers",
+      "aliases": ["Developers", "Engineers", "Programmers", "Full-stack Developers"],
+      "blurb": "Write, review and debug code, and increasingly supervise the agents that produce the first pass of it."
+    },
+    {
+      "id": "devops_platform",
+      "name": "DevOps & Platform Engineers",
+      "aliases": ["SRE", "Platform Engineers", "Infrastructure Engineers", "Cloud Engineers"],
+      "blurb": "Wire AI into CI/CD, incident response and internal platforms, with cost and access controls that hold up in production."
+    },
+    {
+      "id": "engineering_managers",
+      "name": "Engineering Managers",
+      "aliases": ["Tech Leads", "Engineering Leaders", "Staff Engineers"],
+      "blurb": "Decide what the team is allowed to paste into a model, and measure whether the assisted version of the work is actually better."
+    },
+    {
+      "id": "data_scientists",
+      "name": "Data Scientists",
+      "aliases": ["ML Engineers", "Machine Learning Engineers", "Applied Scientists"],
+      "blurb": "Prototype models, build evaluation sets and keep experiments reproducible enough to hand over."
+    },
+    {
+      "id": "data_analysts",
+      "name": "Data Analysts",
+      "aliases": ["Business Analysts", "BI Analysts", "Analytics Engineers"],
+      "blurb": "Turn natural-language questions into governed queries, then defend the definitions behind the chart."
+    },
+    {
+      "id": "product_managers",
+      "name": "Product Managers",
+      "aliases": ["PMs", "Product Owners", "Technical Product Managers"],
+      "blurb": "Synthesise research, write the specs, and keep stakeholder updates fast but honest."
+    },
+    {
+      "id": "designers",
+      "name": "Designers",
+      "aliases": ["Product Designers", "UX Designers", "UI Designers", "UX Researchers"],
+      "blurb": "Explore interface directions quickly and hand off something engineers can actually build against."
+    },
+    {
+      "id": "marketers",
+      "name": "Marketers",
+      "aliases": ["Growth Marketers", "Demand Generation", "Content Marketers", "Brand Marketers"],
+      "blurb": "Produce campaign variants at volume without losing the brand voice, then measure what moved."
+    },
+    {
+      "id": "writers",
+      "name": "Writers & Editors",
+      "aliases": ["Writers", "Content Writers", "Copywriters", "Editors", "Technical Writers"],
+      "blurb": "Get past the blank page faster than you would alone, then edit hard - the value is judgement, not word count."
+    },
+    {
+      "id": "customer_support",
+      "name": "Customer Support",
+      "aliases": ["Support Agents", "Customer Success", "Support Leads", "CX Teams"],
+      "blurb": "Answer tickets faster with grounded suggestions, and know exactly when the assistant should hand over to a human."
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "aliases": ["Account Executives", "SDRs", "Sales Engineers", "Revenue Operations"],
+      "blurb": "Research accounts, prep calls and keep CRM notes accurate without spending the afternoon on it."
+    },
+    {
+      "id": "recruiters",
+      "name": "Recruiters",
+      "aliases": ["Talent Acquisition", "Sourcers", "Talent Partners"],
+      "blurb": "Source and screen at volume while staying inside the rules on automated decisions about candidates."
+    },
+    {
+      "id": "hr_people_ops",
+      "name": "HR & People Ops",
+      "aliases": ["People Ops", "HR Business Partners", "HR Operations"],
+      "blurb": "Answer policy questions consistently, draft employee communications and keep people data tidy."
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "aliases": ["FP&A", "Accountants", "Controllers", "Finance Analysts"],
+      "blurb": "Close faster and model scenarios, with a paper trail an auditor can follow."
+    },
+    {
+      "id": "legal",
+      "name": "Legal",
+      "aliases": ["In-house Counsel", "Lawyers", "Paralegals", "Legal Operations"],
+      "blurb": "Review and draft contracts at speed while keeping both the citation trail and privilege intact."
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "aliases": ["Ops Managers", "Business Operations", "BizOps"],
+      "blurb": "Remove the manual hops between systems and keep the process documented when someone leaves."
+    },
+    {
+      "id": "project_managers",
+      "name": "Project Managers",
+      "aliases": ["Program Managers", "Delivery Managers", "Scrum Masters", "Project Leads"],
+      "blurb": "Turn meetings and messy threads into plans, owners and dates that survive contact with reality."
+    },
+    {
+      "id": "executives",
+      "name": "Executives & Founders",
+      "aliases": ["Founders", "Leadership", "C-suite", "Owners", "General Managers"],
+      "blurb": "Get to a defensible first answer before the meeting, and sanity-check the numbers the team brings."
+    },
+    {
+      "id": "consultants",
+      "name": "Consultants",
+      "aliases": ["Advisors", "Consulting Analysts", "Freelance Consultants"],
+      "blurb": "Compress research and slide production so more of the budget goes to the thinking."
+    },
+    {
+      "id": "researchers",
+      "name": "Researchers",
+      "aliases": ["Academics", "Research Scientists", "Postdocs", "PhD Researchers"],
+      "blurb": "Find and read the literature faster, with citations you can verify rather than trust."
+    },
+    {
+      "id": "educators",
+      "name": "Educators",
+      "aliases": ["Teachers", "Trainers", "Instructional Designers", "Lecturers"],
+      "blurb": "Build materials and differentiated exercises for mixed classrooms without a second workday."
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "aliases": ["Learners", "Bootcamp Students", "Apprentices"],
+      "blurb": "Learn concepts on demand - with the caveat that outsourcing the thinking defeats the purpose."
+    },
+    {
+      "id": "it_administrators",
+      "name": "IT Administrators",
+      "aliases": ["IT Ops", "System Administrators", "IT Managers", "Endpoint Teams"],
+      "blurb": "Provision and constrain AI tools across an organisation, and keep a record of who has access to what."
+    },
+    {
+      "id": "security_engineers",
+      "name": "Security & Risk Engineers",
+      "aliases": ["AppSec", "Security Analysts", "Security Engineers", "Risk & Compliance"],
+      "blurb": "Find the data-leak paths in AI adoption before an auditor, a regulator or an attacker does."
+    }
+  ]
+}
