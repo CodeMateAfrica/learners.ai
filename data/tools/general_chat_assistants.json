@@ -1,0 +1,142 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "maker": "OpenAI",
+    "tagline": "General-purpose conversational AI assistant for writing, coding, and research.",
+    "category": "general_chat_assistants",
+    "subcategory": "conversational-ai",
+    "definition": "ChatGPT is a conversational AI system that answers questions, drafts content, and helps with reasoning and coding tasks inside a browser or app. For many professionals it is the default place to test a new idea, summarize a document, or start a task before moving to a more specialized tool.",
+    "why_it_matters": "It created the mainstream AI workbench for busy teams, moving from a novelty to a daily production tool in a matter of months. The product matters because it is fast to learn, broadly familiar, and often the first AI surface an organization tests for drafting, research, and code assistance.",
+    "workplace_use_cases": [
+      "Drafting client-ready emails, updates, and executive summaries",
+      "Brainstorming product ideas, meeting agendas, and first-pass research notes",
+      "Reviewing rough code or explaining technical bugs in plain English"
+    ],
+    "who_uses_it": ["Software Engineers", "Product Managers", "Writers & Editors", "Executives & Founders", "Marketers"],
+    "how_to_use": "Open the app, choose a model, paste in context or a file, and ask for a specific outcome such as a summary, an email draft, or a technical explanation. Follow up with tighter prompts to refine tone, challenge assumptions, and turn the first pass into something you would actually send.",
+    "key_features": ["Natural-language chat with file upload support", "Long-form drafting and summarization", "Custom GPTs and project-level workflows"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "Free usage is limited by message caps and model access varies by plan and demand.",
+      "paid_plans": [
+        {"name": "Plus", "price": "$20/month", "notes": "Higher usage limits and faster access to new features."},
+        {"name": "Team", "price": "$25-30/user/month", "notes": "Shared workspaces, admin controls, and collaboration tools."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://chat.openai.com",
+    "logo_source_note": "OpenAI public product mark used as a text-safe fallback; no third-party logo asset is bundled.",
+    "related_tools": ["claude", "gemini", "perplexity"],
+    "launched": "2022",
+    "platform": ["Web", "iOS", "Android", "Desktop App", "API"],
+    "featured": true,
+    "example_prompts": [
+      {"label": "Meeting brief", "text": "Summarize this product meeting transcript into a one-page decision brief with risks, owners, and next steps."},
+      {"label": "Email rewrite", "text": "Rewrite this draft in a more concise and executive-friendly tone without losing the key technical details."}
+    ]
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "maker": "Anthropic",
+    "tagline": "High-context assistant for writing, analysis, and long-form reasoning.",
+    "category": "general_chat_assistants",
+    "subcategory": "reasoning-assistant",
+    "definition": "Claude is a large-language-model assistant tuned for careful reasoning, long context windows, and writing tasks that need nuance. It is often chosen when organizations want a model that reads a lot of material at once and then produces a well-structured answer without flattening the source material.",
+    "why_it_matters": "The model became important because it performs especially well on long documents, policy-heavy writing, and thoughtful synthesis. In professional settings, that matters when the output has to be clear, accurate, and readable enough to pass a stakeholder review without a full rewrite.",
+    "workplace_use_cases": [
+      "Reading long proposals or policy documents and surfacing the key risks",
+      "Drafting nuanced client communications with a more natural tone",
+      "Summarizing technical notes and turning them into actionable next steps"
+    ],
+    "who_uses_it": ["Writers & Editors", "Product Managers", "Researchers", "Consultants", "Legal"],
+    "how_to_use": "Start with a project brief, paste in a long document or transcript, and ask for a summary, rewrite, or review with explicit constraints. Because Claude excels at long context, it works particularly well when you need the model to consider a lot of background before suggesting a next move.",
+    "key_features": ["Long-context document analysis", "Strong writing and summarization quality", "Focused prompt workflows for research and editing"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "Free usage includes a limited amount of messaging and access to smaller models; heavier usage is gated behind paid plans.",
+      "paid_plans": [
+        {"name": "Pro", "price": "$20/month", "notes": "Higher usage limits and more model access for individual professionals."},
+        {"name": "Team", "price": "$25-30/user/month", "notes": "Shared workspace and usage controls for teams."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://claude.ai",
+    "logo_source_note": "Anthropic public product branding used for identification; the site keeps a text-based fallback when a logo asset is not shipped in-repo.",
+    "related_tools": ["chatgpt", "gemini", "perplexity"],
+    "launched": "2023",
+    "platform": ["Web", "iOS", "Android", "Desktop App"],
+    "featured": true
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "maker": "Google",
+    "tagline": "AI assistant connected to Google Workspace, search, and multimodal workflows.",
+    "category": "general_chat_assistants",
+    "subcategory": "workspace-assistant",
+    "definition": "Gemini is Google's conversational AI assistant for writing, analysis, search, and multimodal work across Google products. It is most useful when a team already lives in Google Workspace and wants AI support that can work with documents, images, and browser-style research in the same flow.",
+    "why_it_matters": "Google's distribution gives it a large installed base inside enterprise and consumer workflows. The product matters because it sits directly alongside Gmail, Docs, and the broader Google ecosystem, which makes it a practical choice for organizations already standardizing on Google.",
+    "workplace_use_cases": [
+      "Drafting and polishing content inside Google Workspace documents",
+      "Synthesizing notes from meetings, email threads, and research into a brief",
+      "Getting a faster first pass on research questions and image-based tasks"
+    ],
+    "who_uses_it": ["Marketers", "Product Managers", "Executives & Founders", "Operations", "Researchers"],
+    "how_to_use": "Open Gemini from the web or within Google Workspace, then ask for a specific deliverable such as a meeting summary, an outline, or a rewrite. It works best when you provide the source document or a clear set of constraints, because the quality depends on the context you feed it.",
+    "key_features": ["Google Workspace integration", "Multimodal input for text and images", "Fast research and drafting flows"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "Free access includes a limited quota and access to a subset of models; higher limits and enterprise controls are paid features.",
+      "paid_plans": [
+        {"name": "Google AI Pro", "price": "$19.99/month", "notes": "Expanded usage limits and access to premium model tiers."},
+        {"name": "Google AI Ultra", "price": "$124.99/month", "notes": "Higher usage caps and premium Google AI features for power users."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://gemini.google.com",
+    "logo_source_note": "Google public brand assets used for product recognition and direction; the site falls back to a text mark if the logo is not checked into the repo.",
+    "related_tools": ["chatgpt", "claude", "perplexity"],
+    "launched": "2023",
+    "platform": ["Web", "iOS", "Android", "Desktop App"],
+    "featured": false
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "maker": "Perplexity",
+    "tagline": "AI search assistant that answers with citations and references.",
+    "category": "general_chat_assistants",
+    "subcategory": "research-assistant",
+    "definition": "Perplexity is a search-driven AI assistant designed to answer questions with cited sources instead of just generating text in the abstract. It is most useful when a professional wants a fast, source-backed answer and then wants to drill into the references behind it.",
+    "why_it_matters": "Many teams use AI for research but struggle with hallucinated or weakly sourced answers. Perplexity stands out because it turns search into a structured assistant workflow, which makes it useful for competitive research, quick fact checking, and source-driven discovery.",
+    "workplace_use_cases": [
+      "Getting cited answers to competitive and market questions",
+      "Scanning the latest commentary on an industry trend before a meeting",
+      "Turning a vague research prompt into a short, source-backed brief"
+    ],
+    "who_uses_it": ["Researchers", "Product Managers", "Consultants", "Executives & Founders", "Data Analysts"],
+    "how_to_use": "Ask a direct research question, review the cited sources, and then follow up with a sharper question or ask for a comparison table. Use it for a rapid first pass on fact-finding, but always verify the underlying sources before citing the answer externally.",
+    "key_features": ["Cited answer engine", "Search-driven follow-up prompts", "Source-linked research exploration"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "Free users receive limited search volume and model access; paid tiers increase daily usage and advanced features.",
+      "paid_plans": [
+        {"name": "Perplexity Pro", "price": "$20/month", "notes": "Higher search limits and access to more advanced models."},
+        {"name": "Enterprise Pro", "price": "Custom", "notes": "Admin controls, security features, and managed deployment for teams."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://www.perplexity.ai",
+    "logo_source_note": "Perplexity public product branding used as a product label; no bundled logo asset is maintained in the repo.",
+    "related_tools": ["chatgpt", "claude", "gemini"],
+    "launched": "2022",
+    "platform": ["Web", "iOS", "Android"],
+    "featured": false
+  }
+]

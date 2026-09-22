@@ -45,6 +45,12 @@ def word_count(value: str) -> int:
 
 
 def truncate(value: str, limit: int, suffix: str = "…") -> str:
+    value = collapse_ws(value)
+    if len(value) <= limit:
+        return value
+    if limit <= len(suffix):
+        return suffix[:limit]
+    return value[: limit - len(suffix)].rstrip() + suffix
 
 
 # --------------------------------------------------------------------------- #
@@ -105,12 +111,15 @@ def parse_monthly_usd(price: str) -> float | None:
 def format_usd(amount: float) -> str:
     return f"${amount:,.0f}" if amount % 1 == 0 else f"${amount:,.2f}".rstrip("0").rstrip(".")
 
-    value = collapse_ws(value)
-    return value if len(value) <= limit else value[: limit - len(suffix)].rstrip() + suffix
-
 
 def monogram(name: str) -> str:
-    """`"Microsoft 365 Copilot"` -> `"M"`. Used when no logo asset is available.
+    """Return a compact 1-2 character monogram for a product name."""
+    cleaned = re.sub(r"[^A-Za-z0-9 ]", " ", name or "").strip()
+    if not cleaned:
+        return "?"
+    parts = cleaned.split()
+    initials = "".join(part[0].upper() for part in parts[:2])
+    return initials if initials else "?"
 
 
 # --------------------------------------------------------------------------- #
@@ -169,10 +178,3 @@ class Linker:
         if self.depth == 0:
             return path or "./"
         return "../" * self.depth + path
-
-
-    A single letter reads better than two-letter initials in a small badge and
-    avoids collisions between products from the same maker.
-    """
-    cleaned = re.sub(r"[^A-Za-z0-9 ]", " ", name).strip()
-    return cleaned[0].upper() if cleaned else "?"

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "maker": "GitHub",
+    "tagline": "AI coding assistant deeply integrated with GitHub and developer workflows.",
+    "category": "coding_assistants",
+    "subcategory": "ide-assistant",
+    "definition": "GitHub Copilot is an AI coding assistant that suggests code, explains errors, and helps generate changes directly inside the editor or GitHub workflows. It is often the default assistant for teams already living inside GitHub and standard IDEs, because it fits the workflow of code review and pull requests without forcing a new tool stack.",
+    "why_it_matters": "It changed the default expectation for developer tooling by shipping AI suggestions directly into editors and code review flows at enterprise scale. The important thing about Copilot is not just code completion; it is how well it plugs into an existing software delivery system and reduces the friction of writing, reviewing, and iterating on code.",
+    "workplace_use_cases": [
+      "Generating boilerplate and repetitive code in a familiar IDE",
+      "Explaining error messages and suggesting a fix path during debugging",
+      "Drafting commit messages and summarizing pull request changes"
+    ],
+    "who_uses_it": ["Software Engineers", "Engineering Managers", "Data Scientists", "DevOps & Platform Engineers"],
+    "how_to_use": "Install the extension in VS Code, JetBrains, or the GitHub interface, then start typing a function or ask a natural-language question in the chat panel. Use it for the first pass on implementation and review, but keep a human in the loop for security, architecture, and edge-case validation.",
+    "key_features": ["Inline code completion in major editors", "Chat and code generation inside the IDE", "GitHub integration for PR and repo context"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "Free access is limited and targeted at individual developers; paid tiers expand usage and enterprise controls.",
+      "paid_plans": [
+        {"name": "Copilot Pro", "price": "$10/month", "notes": "For individuals with higher usage caps and premium model access."},
+        {"name": "Copilot Business", "price": "$19/user/month", "notes": "For teams needing policy controls and organization-wide management."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://github.com/features/copilot",
+    "logo_source_note": "GitHub public brand assets used for product identification; site uses a text monogram when no logo file is included.",
+    "related_tools": ["cursor", "windsurf", "claude-code"],
+    "launched": "2022",
+    "platform": ["VS Code", "JetBrains IDEs", "Web", "GitHub"],
+    "featured": true
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "maker": "Cursor",
+    "tagline": "AI-native code editor optimized for iterative coding and repo-wide changes.",
+    "category": "coding_assistants",
+    "subcategory": "ai-editor",
+    "definition": "Cursor is an AI-native code editor for building, refactoring, and debugging software with a chat and agent workflow directly in the editor. It matters because it removes the friction between editing code and asking the model to reason over the whole repository, which makes it useful for more complex, multi-file work than plain autocomplete alone.",
+    "why_it_matters": "The product sits at the intersection of IDE experience and agentic coding. It is important because it gives teams a place to ask broader repo questions, apply code changes in context, and iterate faster on implementation without needing to bounce between the terminal, a browser, and a separate assistant chat.",
+    "workplace_use_cases": [
+      "Refactoring a feature across several files while the assistant keeps context",
+      "Explaining an unfamiliar codebase and proposing a minimal change set",
+      "Debugging failing tests and proposing a code fix with a short review loop"
+    ],
+    "who_uses_it": ["Software Engineers", "Engineering Managers", "Data Scientists", "DevOps & Platform Engineers"],
+    "how_to_use": "Install Cursor, open a repository, and use the editor's AI chat or agent to ask for a fix, feature, or refactor in the existing project context. The tool is most effective when you give it an explicit goal and then review the resulting patch before merging it.",
+    "key_features": ["AI chat grounded in the active repo", "Multi-file refactors and agentic editing", "Fast iteration inside the editor"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "Free usage includes a limited monthly quota; paid tiers unlock higher usage and more advanced model access.",
+      "paid_plans": [
+        {"name": "Pro", "price": "$20/month", "notes": "Higher request limits and access to premium AI models."},
+        {"name": "Business", "price": "$40/user/month", "notes": "Admin controls and team-level policy management."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://cursor.com",
+    "logo_source_note": "Cursor public brand mark used as a product identity reference; no binary logo is stored in the repo.",
+    "related_tools": ["github-copilot", "windsurf", "claude-code"],
+    "launched": "2023",
+    "platform": ["VS Code", "Web", "macOS", "Windows", "Linux"],
+    "featured": true
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "maker": "Anthropic",
+    "tagline": "Terminal-native coding agent for editing, testing, and debugging code in place.",
+    "category": "coding_assistants",
+    "subcategory": "terminal-agent",
+    "definition": "Claude Code is a terminal-focused coding agent that can read a repository, make changes, run tests, and report back in the same command-line workflow. It matters in teams where engineers want a more autonomous coding partner but still want the code to live in Git, run under test, and be reviewed like any other change.",
+    "why_it_matters": "The core value is that it operates in a development environment rather than a detached chat window. For teams comfortable with cli-based workflows, that means fewer hops between the editor and the terminal and a clearer path to code review and verification before shipping.",
+    "workplace_use_cases": [
+      "Implementing a small feature with a tight edit-and-test loop in the terminal",
+      "Tracing a failing test and proposing a fix in the repository itself",
+      "Reviewing a codebase for patterns and suggesting a follow-up refactor"
+    ],
+    "who_uses_it": ["Software Engineers", "Engineering Managers", "DevOps & Platform Engineers", "Data Scientists"],
+    "how_to_use": "Install the CLI, point it at your repository, and ask it to fix a bug or implement a feature with a clear set of constraints. The most effective use is to have it operate within a checked-out repo and then review the diff, tests, and risk before merging.",
+    "key_features": ["Terminal-first agent workflow", "Repository-aware editing and testing", "Command-line review and patch generation"],
+    "pricing": {
+      "model": "paid",
+      "has_free_tier": false,
+      "free_tier_details": "No free tier is stated in the public pricing guidance; access is tied to paid usage or plans.",
+      "paid_plans": [
+        {"name": "Claude Code", "price": "Usage-based / plan pricing", "notes": "Available as part of Anthropic's paid model access and account packages."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://claude.ai/code",
+    "logo_source_note": "Anthropic public product identity reused for the record; no bundled brand asset is stored in the repo.",
+    "related_tools": ["github-copilot", "cursor", "windsurf"],
+    "launched": "2024",
+    "platform": ["CLI", "macOS", "Windows", "Linux"],
+    "featured": false
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "maker": "Codeium",
+    "tagline": "Agentic coding environment with workspace-aware editing and inline suggestions.",
+    "category": "coding_assistants",
+    "subcategory": "code-agent",
+    "definition": "Windsurf is an IDE and coding assistant focused on agentic editing, in-context refactoring, and workspace-aware suggestions. It is useful when a developer wants an assistant to browse a project, propose changes, and keep working within the same file and repo context instead of treating code as isolated snippets.",
+    "why_it_matters": "It reflects a broader shift from autocomplete to code agents that can reason across several files. The product matters because it carries this agentic model into a mainstream editor experience, making it a practical option for teams evaluating multi-file programming support beyond basic completion.",
+    "workplace_use_cases": [
+      "Launching a new feature from a short brief and iterating on the code with AI assistance",
+      "Handling cross-file refactors with better repo context than single-file autocomplete",
+      "Reviewing and improving code quality in a familiar editor-based flow"
+    ],
+    "who_uses_it": ["Software Engineers", "Engineering Managers", "Data Scientists", "Product Managers"],
+    "how_to_use": "Install the editor, open the repository, and start by describing the task or the bug you want fixed. Treat the assistant as a paired programmer: specify objectives, review the diff, and validate the outcome with tests before committing.",
+    "key_features": ["Workspace-aware agent flow", "Inline editing and code generation", "Built to iterate quickly on implementation tasks"],
+    "pricing": {
+      "model": "freemium",
+      "has_free_tier": true,
+      "free_tier_details": "A free plan exists, but paid access unlocks faster usage and more advanced project context.",
+      "paid_plans": [
+        {"name": "Pro", "price": "$15/month", "notes": "Ideal for individuals working on multiple projects and deeper code tasks."},
+        {"name": "Teams", "price": "$25/user/month", "notes": "Provides shared controls and team billing for organizations."}
+      ],
+      "pricing_last_verified": "2026-09-22"
+    },
+    "official_url": "https://windsurf.com",
+    "logo_source_note": "Codeium public product naming and mark used for product identification; the site keeps a text fallback rather than bundling the logo file.",
+    "related_tools": ["github-copilot", "cursor", "claude-code"],
+    "launched": "2024",
+    "platform": ["VS Code", "Windows", "macOS", "Linux"],
+    "featured": false
+  }
+]

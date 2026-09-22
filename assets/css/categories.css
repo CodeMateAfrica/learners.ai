@@ -1,0 +1,41 @@
+:root {
+  --cat: #ff2e7e;
+}
+
+.badge--cat {
+  background: color-mix(in srgb, var(--cat) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cat) 42%, rgba(255,255,255,0.1));
+  color: var(--ink);
+}
+
+.filter-option input:checked + .filter-option__label {
+  color: var(--ink);
+}
+
+.tool-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+}
+
+.tool-card__badge,
+.badge--pricing {
+  font-family: var(--font-mono);
+}
+
+.category-card {
+  border: 1px solid var(--line);
+}
+
+.site-grid,
+.directory-grid,
+.card-grid,
+.results-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.tool-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}

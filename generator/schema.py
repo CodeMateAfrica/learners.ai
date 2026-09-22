@@ -34,7 +34,7 @@ PRICING_MODELS: dict[str, dict[str, str]] = {
     "enterprise": {"label": "Enterprise", "slug": "enterprise"},
 }
 
-_ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+_ID_RE = re.compile(r"^[a-z0-9]+(?:[_-][a-z0-9]+)*$")
 _LAUNCHED_RE = re.compile(r"^\d{4}(?:-\d{2}(?:-\d{2})?)?$")
 _URL_RE = re.compile(r"^https://[^\s/]+(?:\.[^\s/]+)+(?:[/?#]\S*)?$")
 

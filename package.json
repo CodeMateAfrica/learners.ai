@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "python3 scripts/build.py",
+    "check:links": "python3 scripts/check_links.py",
+    "test": "python3 -m compileall generator scripts"
   },
   "repository": {
     "type": "git",
