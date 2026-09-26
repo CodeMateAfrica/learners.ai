@@ -44,9 +44,8 @@
 <main id="main">
 
     <section class="wrap section">
-      <div class="results-wrap">
-        <div class="results-shell">
-          <aside class="filters" aria-labelledby="filters-title">
+      <div class="directory" data-directory>
+        <aside class="filters" aria-labelledby="filters-title">
       <div class="filters__head">
         <span class="filters__title" id="filters-title"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M7 12h10M10 18h4"/></svg> Filters</span>
         <button type="button" class="button button--ghost button--sm" data-clear>Clear all</button>
@@ -213,8 +212,9 @@
           <span class="filter-option__count" data-count-for="github">1</span>
         </label></div></fieldset>
     </aside>
-          <div class="results-panel">
-            <div class="section__head"><div><h2>AI tools for Executives & Founders</h2><p>Filter by pricing, role, platform, or search for a tool by name and use case.</p></div><div class="section__head__action"><div class="results-toolbar">
+        <div class="results-panel">
+          <div class="section__head"><div><h2>AI tools for Executives & Founders</h2><p>Filter by pricing, role, platform, or search for a tool by name and use case.</p></div></div>
+          <div class="results-toolbar">
       <form class="search-form " role="search" action="../../directory/" method="get">
       <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
       <input type="search" name="q" value="" placeholder="Search tools…"
@@ -229,9 +229,9 @@
         </select>
       </label>
     </div>
-    <ul class="active-filters" data-active-filters aria-label="Active filters"></ul></div></div>
-            <div class="results" data-directory data-results>
-              <article class="tool-card" style="--cat: hsl(330 78% 68%);" data-tool data-name="chatgpt" data-maker="openai" data-search="chatgpt openai general-purpose conversational ai assistant for writing, coding, and research. conversational-ai" data-keywords="chatgpt openai conversational ai general-purpose ai chat assistants chat assistants software engineers product managers writers &amp; editors executives &amp; founders marketers web ios android desktop app api natural-language chat with file upload support long-form drafting and summarization custom gpts and project-level workflows" data-category="general_chat_assistants" data-pricing="freemium" data-roles="software-engineers|product-managers|writers-editors|executives-founders|marketers" data-platforms="web|ios|android|desktop-app|api" data-launched="2022" data-featured="true">
+    <ul class="active-filters" data-active-filters aria-label="Active filters"></ul>
+          <div class="grid grid--cards" data-results>
+            <article class="tool-card" style="--cat: hsl(330 78% 68%);" data-tool data-name="chatgpt" data-maker="openai" data-search="chatgpt openai general-purpose conversational ai assistant for writing, coding, and research. conversational-ai" data-keywords="chatgpt openai conversational ai general-purpose ai chat assistants chat assistants software engineers product managers writers &amp; editors executives &amp; founders marketers web ios android desktop app api natural-language chat with file upload support long-form drafting and summarization custom gpts and project-level workflows" data-category="general_chat_assistants" data-pricing="freemium" data-roles="software-engineers|product-managers|writers-editors|executives-founders|marketers" data-platforms="web|ios|android|desktop-app|api" data-launched="2022" data-featured="true">
       <div class="tool-card__head">
         <span class="tool-logo" aria-hidden="true">C</span>
         <div class="tool-card__titles">
@@ -277,13 +277,12 @@
         <a class="badge badge--cat" href="../../categories/general-chat-assistants/" style="--cat: hsl(330 78% 68%);">Chat assistants</a>
       </div>
     </article>
-              <div class="empty-state" data-empty hidden>
+            <div class="empty-state" data-empty hidden>
       <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
       <h3>Nothing matches yet</h3>
       <p>No tools match these filters yet.</p>
       <p class="small muted">Loosen a filter, or clear the search and try a broader term.</p>
     </div>
-            </div>
           </div>
         </div>
       </div>
