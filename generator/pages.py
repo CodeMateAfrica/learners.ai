@@ -46,12 +46,12 @@ def home_page(registry: data.Registry) -> str:
 
     <section class="wrap section">
       {components.section_head('Featured tools', 'A quick shortlist of the most relevant entries for daily work.')}
-      <div class="tool-grid">{featured}</div>
+      <div class="grid grid--cards">{featured}</div>
     </section>
 
     <section class="wrap section">
       {components.section_head('Browse by category', 'Twenty categories, each with its own navigable index.')}
-      <div class="category-grid">{categories}</div>
+      <div class="grid grid--categories">{categories}</div>
     </section>
     """
     return templates.render_page(
@@ -112,7 +112,7 @@ def all_categories_page(registry: data.Registry) -> str:
     body = f"""
     <section class="wrap section">
       {components.section_head('All categories', 'Every top-level taxonomy in the reference.')}
-      <div class="category-grid">{cards}</div>
+      <div class="grid grid--categories">{cards}</div>
     </section>
     """
     return templates.render_page(
@@ -131,7 +131,7 @@ def roles_page(registry: data.Registry) -> str:
     body = f"""
     <section class="wrap section">
       {components.section_head('Browse by role', 'See which tools match each professional audience.')}
-      <div class="category-grid">{cards}</div>
+      <div class="grid grid--roles">{cards}</div>
     </section>
     """
     return templates.render_page(
@@ -170,62 +170,66 @@ def tool_page(registry: data.Registry, tool: schema.Tool) -> str:
     ctx = _page_ctx(registry, tool.url)
     category = registry.category_of(tool)
     related = registry.related(tool)
+    flags = ""
+    if tool.verification_flag:
+        flags = (
+            f'<span class="badge badge--flag" title="This entry still needs a human verification pass">'
+            f"Needs verification</span>"
+        )
     body = f"""
-    <section class="wrap section tool-header">
+    <div class="wrap">
       {components.breadcrumbs(ctx, [("Directory", "/directory/"), (category.short_name, category.url), (tool.name, "")])}
-      <div class="tool-detail__head">
-        {components.logo_mark(ctx, tool, large=True)}
-        <div>
-          <p class="eyebrow">{util.esc(category.short_name)}</p>
-          <h1>{util.esc(tool.name)}</h1>
-          <p class="lede">{util.esc(tool.tagline)}</p>
+    </div>
+
+    <section class="wrap tool-header" style="--cat: {util.esc(category.accent)};">
+      <div class="tool-header__identity">
+        <div class="tool-header__row">
+          {components.logo_mark(ctx, tool, large=True)}
+          <div>
+            <p class="eyebrow" style="margin-bottom:0.2rem;">{util.esc(category.short_name)}</p>
+            <h1>{util.esc(tool.name)}</h1>
+            <p class="tool-header__maker">by {util.esc(tool.maker)}</p>
+          </div>
         </div>
+        <p class="tool-tagline">{util.esc(tool.tagline)}</p>
+        <div class="tool-header__badges">
+          {components.pricing_badge(tool.pricing)}
+          {components.category_badge(ctx, category)}
+          {flags}
+        </div>
+      </div>
+      <div>
+        {components.fact_list(ctx, tool)}
       </div>
     </section>
 
-    <section class="wrap section tool-layout">
-      <article class="tool-main">
-        <div class="content-panel">
-          <h2>What it is</h2>
-          <p>{util.esc(tool.definition)}</p>
-        </div>
+    <section class="wrap tool-body" style="--cat: {util.esc(category.accent)};">
+      <article class="prose">
+        <h2>What it is</h2>
+        <p>{util.esc(tool.definition)}</p>
 
-        <div class="content-panel">
-          <h2>Why it matters</h2>
-          <p>{util.esc(tool.why_it_matters)}</p>
-        </div>
+        <h2>Why it matters</h2>
+        <p>{util.esc(tool.why_it_matters)}</p>
 
-        <div class="content-panel">
-          <h2>Workplace use cases</h2>
-          <ul class="check-list">{''.join(f'<li>{util.esc(item)}</li>' for item in tool.workplace_use_cases)}</ul>
-        </div>
+        <h2>Workplace use cases</h2>
+        <ul>{''.join(f'<li>{util.esc(item)}</li>' for item in tool.workplace_use_cases)}</ul>
 
-        <div class="content-panel">
-          <h2>Who uses it</h2>
-          {components.role_links(ctx, tool.who_uses_it)}
-        </div>
+        <h2>Who uses it</h2>
+        {components.role_links(ctx, tool.who_uses_it)}
 
-        <div class="content-panel">
-          <h2>How to use it</h2>
-          <p>{util.esc(tool.how_to_use)}</p>
-        </div>
+        <h2>How to use it</h2>
+        <p>{util.esc(tool.how_to_use)}</p>
 
-        <div class="content-panel">
-          <h2>Key features</h2>
-          <ul class="check-list">{''.join(f'<li>{util.esc(item)}</li>' for item in tool.key_features)}</ul>
-        </div>
+        <h2>Key features</h2>
+        <ul>{''.join(f'<li>{util.esc(item)}</li>' for item in tool.key_features)}</ul>
       </article>
 
-      <aside class="tool-side">
-        <div class="content-panel">
-          <h2>At a glance</h2>
-          {components.fact_list(ctx, tool)}
-        </div>
-        <div class="content-panel">
-          <h2>Pricing</h2>
+      <aside class="side-panel">
+        <div class="side-card">
+          <h2>Pricing Details</h2>
           {components.pricing_table(tool)}
         </div>
-        <div class="content-panel">
+        <div class="side-card">
           <h2>Related tools</h2>
           {components.related_tools(ctx, related)}
         </div>
@@ -287,15 +291,14 @@ def _directory_body(
     cards = "".join(components.tool_card(ctx, tool) for tool in tools)
     body = f"""
     <section class="wrap section">
-      <div class="results-wrap">
-        <div class="results-shell">
-          {filters}
-          <div class="results-panel">
-            {components.section_head(title, 'Filter by pricing, role, platform, or search for a tool by name and use case.', components.results_toolbar(ctx, action="/directory/", total=len(tools), placeholder="Search tools…"))}
-            <div class="results" data-directory data-results>
-              {cards}
-              {components.empty_state()}
-            </div>
+      <div class="directory" data-directory>
+        {filters}
+        <div class="results-panel">
+          {components.section_head(title, 'Filter by pricing, role, platform, or search for a tool by name and use case.')}
+          {components.results_toolbar(ctx, action="/directory/", total=len(tools), placeholder="Search tools…")}
+          <div class="grid grid--cards" data-results>
+            {cards}
+            {components.empty_state()}
           </div>
         </div>
       </div>

@@ -12,14 +12,21 @@ DATA_DIR = ROOT / "data" / "tools"
 
 
 def fetch_status(url: str, *, timeout: int = 20) -> tuple[int | None, str | None]:
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+    }
     for method in ("HEAD", "GET"):
-        req = request.Request(url, method=method, headers={"User-Agent": "learners.ai-link-check/1.0"})
+        req = request.Request(url, method=method, headers=headers)
         try:
             with request.urlopen(req, timeout=timeout) as resp:
                 return resp.status, resp.reason
         except error.HTTPError as exc:
+            # Many AI product sites (e.g. OpenAI, Claude, Perplexity) deploy strict anti-bot protections (Cloudflare / Incapsula)
+            # that return 403 / 405 / 429 to programmatic scripts. A 403 Forbidden indicates the server endpoint exists.
             if exc.code in {403, 405, 429}:
-                continue
+                return exc.code, f"{exc.reason} (anti-bot protection)"
             return exc.code, exc.reason
         except Exception:
             continue
